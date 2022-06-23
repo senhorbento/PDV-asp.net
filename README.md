@@ -2,11 +2,13 @@
 
 Requisitos iniciais do front:
 01. Tela de login
-- Opção de esqueci a senha
+- Opção de esqueci a senha (Outra janela)
 
 02. Janela de venda:
 - Adicionar Cliente (Outra janela)
-- Adicionar Produto ao carrinho (Outra janela)
+- Adicionar Produto ao carrinho 
+	- através da lista de produtos(Outra janela)
+	- por código
 - Remover produto carrinho
 - Finalizar venda
 
