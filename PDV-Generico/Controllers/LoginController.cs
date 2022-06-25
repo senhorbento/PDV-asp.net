@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PDV_Generico.Models;
 
 namespace PDV_Generico.Controllers
 {
@@ -8,5 +9,23 @@ namespace PDV_Generico.Controllers
         {
             return View();
         }
+
+        public void ChecarLogin()
+        {
+            //Falta receber os dados do html
+            Usuario checagem = new Usuario();
+            checagem.usuario = "opa";
+            checagem.senha = "123";
+
+            if(checagem.Login())
+            {
+                Response.Redirect("/PDV/Index");
+            }
+            else
+            {
+                Response.Redirect("/Login/Index");
+            }
+        }
+
     }
 }
