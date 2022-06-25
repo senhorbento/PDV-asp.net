@@ -1,11 +1,13 @@
-﻿
-@{
-    Layout = "_Layout";
+﻿@{
+    Layout = "_LayoutVazio";
 }
 
-<h1>Login em PDV Genérico</h1>
+<div align="center">
+    <h1>Login em PDV Genérico</h1>
+</div>
 
-<form action="/Login/ChecarLogin" method="post">
+
+<form action="/Login/ChecarLogin" method="post" align="center">
     <label for="user">Usuário:</label>
     <input type="text" id="BxUser" name="BxUser"><br><br>
     <label for="password">Senha:</label>
@@ -13,4 +15,4 @@
     <input type="submit" value="Entrar">
 </form>
 
-<p><a href="url">Esqueci a senha.</a><p>
+<p align="center"><a href="url">Esqueci a senha.</a><p>
