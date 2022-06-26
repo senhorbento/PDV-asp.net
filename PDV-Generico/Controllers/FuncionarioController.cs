@@ -4,7 +4,7 @@ using System.Diagnostics;
 
 namespace PDV_Generico.Controllers
 {
-    public class PDVController : Controller
+    public class FuncionarioController : Controller
     {
         public IActionResult Index()
         {
@@ -14,26 +14,7 @@ namespace PDV_Generico.Controllers
         {
             return View();
         }
-        public IActionResult Compra()
-        {
-            return View();
-        }
-
         public IActionResult Cliente()
-        {
-            return View();
-        }
-
-        public IActionResult Fornecedor()
-        {
-            return View();
-        }
-        public IActionResult Estoque()
-        {
-            return View();
-        }
-
-        public IActionResult Conta()
         {
             return View();
         }

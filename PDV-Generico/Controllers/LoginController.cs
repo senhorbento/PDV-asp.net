@@ -19,7 +19,7 @@ namespace PDV_Generico.Controllers
 
             if(checagem.Login())
             {
-                Response.Redirect("/PDV/Index");
+                Response.Redirect("/Admin/Index");
             }
             else
             {

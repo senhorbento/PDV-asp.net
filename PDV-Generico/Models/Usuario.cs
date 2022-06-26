@@ -2,8 +2,9 @@
 {
     public class Usuario
     {
-        public string usuario { get; set; }
-        public string senha { get; set; }
+        public string? usuario   { get; set; }
+        public string? senha     { get; set; }
+        public string? funcao    { get; set; }
 
         public bool Login()
         {
@@ -13,6 +14,7 @@
 
             if(this.usuario == teste.usuario && this.senha == teste.senha)
             {
+                this.funcao = "Admin";
                 return true;
             }
             return false;
