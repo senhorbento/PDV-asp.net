@@ -9,7 +9,7 @@ namespace PDV_Generico.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public void ChecarLogin()
         {
             //Falta receber os dados do html
