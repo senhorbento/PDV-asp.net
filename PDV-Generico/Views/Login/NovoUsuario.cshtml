@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "_LayoutVazio";
+}
+
+<div align="center">
+    <h1>Novo usuário</h1>
+</div>
+
+<form asp-controller="Login" asp-action="Index" method="post">
+    <div class="form-group" align="center">
+        <label for="BxUsuario">Usuário</label>
+        <input type="text" class="form-control" id="BxUsuario" placeholder="Insira seu usuário" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxSenha">Senha</label>
+        <input type="password" class="form-control" id="BxSenha" placeholder="Insira sua senha" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxConfirmarSenha">Confirmar senha</label>
+        <input type="password" class="form-control" id="BxConfirmarSenha" placeholder="Insira novamente sua senha" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxEmail">Email</label>
+        <input type="email" class="form-control" id="BxEmail" placeholder="Insira seu email" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxConfirmarEmail">Confirmar email</label>
+        <input type="email" class="form-control" id="BxConfirmarEmail" placeholder="Insira novamente seu email" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxNome">Nome</label>
+        <input type="text" class="form-control" id="BxNome" placeholder="Insira seu nome" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxCpf_Cnpj">CPF ou CNPJ</label>
+        <input type="text" class="form-control" id="BxCpf_Cnpj" placeholder="Insira seu cpf/cnpj (somente números)" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxTelefone">Telefone</label>
+        <input type="text" class="form-control" id="BxTelefone" placeholder="Insira seu telefone (somente números)" style="width:30%">
+    </div>
+    <div class="form-group" align="center">
+        <label for="BxFuncao">Função</label>
+        <input type="text" class="form-control" id="BxFuncao" placeholder="Insira a função" style="width:30%">
+    </div>
+    <div align="center" style="margin-top:10px;">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+</form>

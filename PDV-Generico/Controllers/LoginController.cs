@@ -15,6 +15,11 @@ namespace PDV_Generico.Controllers
             return View();
         }
 
+        public IActionResult NovoUsuario()
+        {
+            return View();
+        }
+
         [HttpPost]
         public void ChecarLogin()
         {
