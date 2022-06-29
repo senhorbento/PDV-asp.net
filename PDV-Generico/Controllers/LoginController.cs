@@ -9,11 +9,17 @@ namespace PDV_Generico.Controllers
         {
             return View();
         }
+
+        public IActionResult EsqueciSenha()
+        {
+            return View();
+        }
+
         [HttpPost]
         public void ChecarLogin()
         {
             //Falta receber os dados do html
-            Usuario checagem = new Usuario();
+            Funcionario checagem = new Funcionario();
             checagem.usuario = "opa";
             checagem.senha = "123";
 
