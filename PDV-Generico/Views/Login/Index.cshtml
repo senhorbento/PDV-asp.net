@@ -8,14 +8,14 @@
 
 
 
-<form asp-controller="Login" asp-action="ChecarLogin" method="post">
+<form action="/Login/ChecarLogin" method="post">
     <div class="form-group" align="center">
         <label for="BxUsuario">Usuário</label>
-        <input type="text" class="form-control" id="BxUsuario" placeholder="Insira seu usuário" style="width:30%">
+        <input type="text" class="form-control" id="BxUsuario" name="BxUsuario" placeholder="Insira seu usuário" style="width:30%" />
     </div>
     <div class="form-group" align="center">
         <label for="BxSenha">Senha</label>
-        <input type="password" class="form-control" id="BxSenha" placeholder="Insira sua senha" style="width:30%">
+        <input type="password" class="form-control" id="BxSenha" name="BxSenha" placeholder="Insira sua senha" style="width:30%">
     </div>
     <div class="form-check" align="center">
         <input type="checkbox" id="BxConectado" align="center">

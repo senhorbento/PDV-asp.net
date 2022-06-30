@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PDV_Generico.Models;
+using System.Web;
 
 namespace PDV_Generico.Controllers
 {
     public class LoginController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
+
         {
             return View();
         }
@@ -21,12 +24,11 @@ namespace PDV_Generico.Controllers
         }
 
         [HttpPost]
-        public void ChecarLogin()
+        public void ChecarLogin(string BxUsuario, string BxSenha)
         {
-            //Falta receber os dados do html
             Funcionario checagem = new Funcionario();
-            checagem.usuario = "opa";
-            checagem.senha = "123";
+            checagem.usuario = BxUsuario;
+            checagem.senha = BxSenha;
 
             if(checagem.Login())
             {
