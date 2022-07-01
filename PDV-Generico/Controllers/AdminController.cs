@@ -6,7 +6,7 @@ namespace PDV_Generico.Controllers
 {
     public class AdminController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Home()
         {
             return View();
         }

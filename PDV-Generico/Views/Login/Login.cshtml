@@ -1,0 +1,39 @@
+﻿@model PDV_Generico.Models.Funcionario.FuncionarioLoginModel
+
+@{
+    Layout = "_LayoutVazio";
+    ViewData["Title"] = "Login";
+}
+
+<div align="center" style="margin-top:20%;">
+    <h1>Login em PDV Genérico</h1>
+</div>
+
+<form asp-action="ChecarLogin">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group" align="center">
+        <label asp-for="usuario" class="control-label">Usuário</label>
+        <input asp-for="usuario" placeholder="Insira seu usuário" style="width:30%" class="form-control"/>
+        <span asp-validation-for="usuario" class="text-danger"></span>
+    </div>
+    <div class="form-group" align="center">
+        <label asp-for="senha" class="control-label">Senha</label>
+        <input asp-for="senha" input type="password" placeholder="Insira sua senha" style="width:30%" class="form-control"/>
+        <span asp-validation-for="senha" class="text-danger"></span>
+    </div>
+    <div class="form-check" align="center">
+        <input type="checkbox" id="BxConectado" align="center">
+        <label for="BxConectado" align="center">Manter conectado</label>
+    </div>
+    <div class="form-group" align="center">
+        <input type="submit" value="Logar" class="btn btn-primary" />
+    </div>
+</form>
+
+<div style="margin-top:10px;" align="center">
+    <a asp-action="Login/EsqueciSenha" style="color:black;">Esqueci a senha</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

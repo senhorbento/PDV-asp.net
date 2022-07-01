@@ -1,44 +1,41 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PDV_Generico.Models;
+using PDV_Generico.Models.Funcionario;
 using System.Web;
 
 namespace PDV_Generico.Controllers
 {
     public class LoginController : Controller
     {
-        [HttpGet]
-        public IActionResult Index()
-
+        public IActionResult Login()
         {
             return View();
         }
-
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
         public IActionResult EsqueciSenha()
         {
             return View();
         }
-
-        public IActionResult NovoUsuario()
-        {
-            return View();
-        }
-
         [HttpPost]
-        public void ChecarLogin(string BxUsuario, string BxSenha)
+        public void ChecarLogin(FuncionarioLoginModel funcionario)
         {
-            Funcionario checagem = new Funcionario();
-            checagem.usuario = BxUsuario;
-            checagem.senha = BxSenha;
-
-            if(checagem.Login())
+            if(funcionario.Login())
             {
-                Response.Redirect("/Admin/Index");
+                if (funcionario.funcao == "Admin")
+                {
+                    Response.Redirect("/Admin/Home");
+                }
+                else
+                {
+                    Response.Redirect("/Funcionario/Home");
+                }
             }
             else
             {
-                Response.Redirect("/Login/Index");
+                Response.Redirect("/Login/Login");
             }
         }
-
     }
 }
